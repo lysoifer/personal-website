@@ -1,0 +1,9 @@
+// Reduce line spacing site-wide
+p {
+  line-height: 1.2;
+}
+
+// Also adjust for article/post content
+article p {
+  line-height: 1.2;
+}
