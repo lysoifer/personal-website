@@ -72,3 +72,17 @@ body {
 body:has(.home-section-bg) #page-bg {
   background: transparent !important;
 }
+
+/* Add logo to navbar */
+.navbar-brand::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('/media/rubiks-cube.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 12px;
+  vertical-align: middle;
+}
