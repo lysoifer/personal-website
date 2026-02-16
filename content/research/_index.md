@@ -6,6 +6,10 @@ type: landing
 design:
   # Section spacing
   spacing: '5rem'
+  css_class: 'research-page'
+  background:
+    color: 'white'
+    text_color_light: false
 
 # Page sections
 sections:

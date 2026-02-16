@@ -1,42 +1,60 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ''
-summary: ''
-date: 2022-10-24
+title: ""
 type: landing
-
-design:
-  # Default section spacing
-  spacing: '6rem'
-
+date: 2025-01-25
+draft: false
+############################### Banner ##################
 sections:
-  - block: resume-biography-3
+  - block: hero
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: me
-      text: ''
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
-      headings:
-        about: ''
-        education: ''
-        interests: ''
+      title: '<span style="color: white;">Dimensional Ecology</span>'
+      text: '<span style="color: white;">Impacts of spatiotemporal climate variability on multidimensional ecological patterns</span>'
     design:
-      # Use the new Gradient Mesh which automatically adapts to the selected theme colors
       background:
-        gradient_mesh:
-          enable: true
-
-      # Name heading sizing to accommodate long or short names
-      name:
-        size: md # Options: xs, sm, md, lg (default), xl
-
-      # Avatar customization
-      avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+        image:
+          filename: chucanti-landscape.jpeg
+          filters:
+            brightness: 0.2  # Add overlay
+        gradient_start: 'rgba(0, 0, 0, 0.3)'
+        gradient_end: 'rgba(0, 0, 0, 0.1)'
+      text_color_light: true
+      css_class: 'text-white'
+  - block: markdown
+    id: about
+    content:
+      title: ""
+      text: |
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center; width: 100%; padding: 0 0%;">
+          <div>
+            <img src="/media/me.jpg" alt="Lydia Soifer" style="width: 100%; border-radius: 10px;">
+          </div>
+          <div>
+            <h2 style="color: black;">About Me</h2>
+            <p style="color: black;">I am a PhD candidate in the <a href="https://www.schefferslab.com/" target="_blank" rel="noopener" style="color: #000000; text-decoration: underline;">Scheffers lab</a> at the University of Florida. I completed my MPhil in <a href="https://www.plantsci.cam.ac.uk/directory/david-coomes" target="_blank" rel="noopener" style="color: #000000; text-decoration: underline;">David Coome's lab</a> at the University of Cambridge (2021-2022) and my undergraduate at Davidson College (2016-2020). My work integrates field-based observations with big data and computational approaches to understand how climate variability shapes biodiversity patterns from local to global scales.</p>
+          </div>
+        </div>        
+    design:
+      background: 
+        color: white
+      spacing:
+        padding: ['20px', '0', '0px', '0']
+  - block: markdown
+    id: research-program
+    content:
+      title: ""
+      text: |
+        <div style="width: 100%; padding: 0 5%; box-sizing: border-box;">
+          <div>
+            <h2 style="color: black;">Research Program</h2>
+            <p style="color: black;">Climate shapes biogeographic patterns from local to global scales. Understanding the nuances of these processes is crucial for forecasting climate change impacts. However, climate maps typically misrepresent the conditions experienced by terrestrial organisms. My research focuses on examining how the variability in terrestrial climates over three-dimensional space and through time shape species' distributions and biodiversity patterns. I adress this research using diverse methods from measuring microclimate variability and species' responses at local scales to modeling 3D microclimates over large spatiotemporal extents.</p>
+            <a href="/research/" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background: rgb(45, 103, 52); color: white; border-radius: 5px; text-decoration: none;">View Research</a>
+          </div>
+        </div> 
+    design:
+      background: 
+        color: white
+      spacing:
+        padding: ['0px', '0', '20px', '0']
   - block: collection
     id: news
     content:
@@ -46,7 +64,7 @@ sections:
       # Page type to display. E.g. post, talk, publication...
       page_type: blog
       # Choose how many pages you would like to display (0 = all pages)
-      count: 10
+      count: 3
       # Filter on criteria
       filters:
         author: ''
@@ -62,10 +80,11 @@ sections:
       order: desc
     design:
       # Choose a layout view
-      view: card
+      view: article-grid
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
+      columns: 3
   - block: cta-card
     demo: true # Only display this section in the HugoBlox Kit demo site
     content:
